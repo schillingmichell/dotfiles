@@ -1,4 +1,7 @@
-*
-!.gitignore
-!.vimrc
-!.vim/
+/*
+!/.gitignore
+!/.vimrc
+!/.vim/
+!/.bashrc
+!/.bash_aliases
+!/.config/
