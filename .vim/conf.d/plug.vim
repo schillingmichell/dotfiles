@@ -8,5 +8,10 @@ endif
 call plug#begin('~/.vim/plugged')
     Plug 'tomasr/molokai'
     Plug 'scrooloose/nerdtree'
+    Plug 'Xuyuanp/nerdtree-git-plugin'
     Plug 'scrooloose/syntastic'
+    Plug 'ctrlpvim/ctrlp.vim'
+    Plug 'bling/vim-airline'
+    Plug 'airblade/vim-gitgutter'
+    Plug 'tpope/vim-fugitive'
 call plug#end()

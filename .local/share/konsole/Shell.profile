@@ -1,6 +1,7 @@
 [Appearance]
+BoldIntense=true
 ColorScheme=Monokai
-Font=DejaVu Sans Mono,11,-1,0,50,0,0,0,0,0
+Font=Source Code Pro,12,-1,5,57,0,0,0,0,0
 
 [Cursor Options]
 CursorShape=0
