@@ -1,9 +1,12 @@
 " disable compatibility to vi to enable features
 set nocompatible
 
+"{{{ includes
 " load config for vim-plug plugin
 source ~/.vim/conf.d/plug.vim
+"}}}
 
+"{{{ 
 " always uses spaces instead of tab characters
 set expandtab
 
@@ -41,9 +44,15 @@ set number
 " prevent autointendation when pasting
 set paste
 
+" add mouse support
+set mouse=a
+
+
+"{{{ key mappings
 " map CTRL+SHIFT+C to 'copy'
 map <C-S-c>         "+y
 
 " map CTRL+SHIFT+V to 'paste'
 map <C-S-v>         "+p
+"}}}
 
