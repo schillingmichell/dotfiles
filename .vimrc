@@ -6,6 +6,40 @@ source ~/.vim/conf.d/plug.vim
 source ~/.vim/conf.d/nerdtree.vim
 "}}}
 
+"{{{ auto command
+" Automatically cd into the directory that the file is in
+autocmd BufEnter * execute "chdir ".escape(expand("%:p:h"), ' ')
+
+" Remove any trailing whitespace that is in the file
+autocmd BufRead,BufWrite * if ! &bin | silent! %s/\s\+$//ge | endif
+
+" Restore cursor position to where it was before
+augroup JumpCursorOnEdit
+   au!
+   autocmd BufReadPost *
+            \ if expand("<afile>:p:h") !=? $TEMP |
+            \   if line("'\"") > 1 && line("'\"") <= line("$") |
+            \     let JumpCursorOnEdit_foo = line("'\"") |
+            \     let b:doopenfold = 1 |
+            \     if (foldlevel(JumpCursorOnEdit_foo) > foldlevel(JumpCursorOnEdit_foo - 1)) |
+            \        let JumpCursorOnEdit_foo = JumpCursorOnEdit_foo - 1 |
+            \        let b:doopenfold = 2 |
+            \     endif |
+            \     exe JumpCursorOnEdit_foo |
+            \   endif |
+            \ endif
+   " Need to postpone using "zv" until after reading the modelines.
+   autocmd BufWinEnter *
+            \ if exists("b:doopenfold") |
+            \   exe "normal zv" |
+            \   if(b:doopenfold > 1) |
+            \       exe  "+".1 |
+            \   endif |
+            \   unlet b:doopenfold |
+            \ endif
+augroup END
+"}}}
+
 "{{{ look and feel
 " set vim to 256 color mode
 let &t_Co           = 256
@@ -58,7 +92,7 @@ set autoindent
 set smartindent
 
 " prevent autointendation when pasting
-set paste
+set nopaste
 
 " add mouse support in all modes
 set mouse=a
@@ -90,14 +124,18 @@ set hlsearch
 " close the buffer if a tabl is closed
 set nohidden
 
-
+" enable folding
+set foldmethod=marker
 "}}}
 
 "{{{ key mappings
 " map CTRL+SHIFT+C to 'copy'
-map <C-S-c>         "+y
+nnoremap <C-S-c>         "+y
 
 " map CTRL+SHIFT+V to 'paste'
-map <C-S-v>         "+p
+nnoremap <C-S-v>         "+p
+
+" use space to toggle fold
+nnoremap <space>        za
 "}}}
 

@@ -93,10 +93,11 @@
 		".hg",
 		"CVS"
 	],
-	"font_face": "DeJaVu Sans Mono",
+	"font_face": "Source Code Pro Medium",
 	"font_options":
 	[
 	],
+	"font_size": 10,
 	"gpu_window_buffer": "auto",
 	"gutter": true,
 	"highlight_line": true,
