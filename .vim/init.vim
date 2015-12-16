@@ -1,1 +1,1 @@
-/home/michell/.vimrc
+../.vimrc
