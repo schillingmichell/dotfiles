@@ -7,9 +7,8 @@ alias l='ls -lhF'
 alias la='ls -lahF'
 alias ll='la'
 
-alias nvim="nvim -p"
-alias vi="nvim"
-alias vim="nvim"
+alias vi="vim"
+alias vim="vim -p"
 
 alias rm='rm -i'
 
