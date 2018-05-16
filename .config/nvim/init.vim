@@ -1,9 +1,7 @@
 "{{{ includes
-" load config for vim-plug plugin
-source ~/.vim/conf.d/plug.vim
+source $HOME/.config/nvim/conf.d/plug.vim
+source $HOME/.config/nvim/conf.d/nerdtree.vim
 
-" load config for nerdtree plugin
-source ~/.vim/conf.d/nerdtree.vim
 "}}}
 
 "{{{ auto command

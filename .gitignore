@@ -1,8 +1,7 @@
 /*
 !/.gitignore
-!/.vimrc
-!/.vim/
 !/.bashrc
-!/.bash_aliases
+!/.zshrc
+!/.aliases
 !/.config/
 !/.local/
