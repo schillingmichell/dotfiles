@@ -12,4 +12,4 @@ alias vim="nvim -p"
 
 alias rm='rm -i'
 
-alias ssh='ssh -c arcfour,blowfish-cbc -XC'
+#alias ssh='ssh -c arcfour,blowfish-cbc -XC'

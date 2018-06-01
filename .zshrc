@@ -1,12 +1,29 @@
-# If you come from bash you might have to change your $PATH.
+export DISPLAY=:0.0
+
+if [[ -n $(ifconfig | egrep 'inet\ *10\.(151|212)\.') ]]; then
+    proxy_host="http://194.55.109.155:80"
+    echo "setting proxy to '${proxy_host}'"
+    export http_proxy="$proxy_host"
+    export https_proxy="$proxy_host"
+    export no_proxy="10.*,172.19.*,194.55.*,localhost"
+fi
+
+export EDITOR="nvim"
+
+#If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-  export ZSH=/home/michell/.oh-my-zsh
+export ZSH=$HOME/.oh-my-zsh
 
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
+powerlevel9k_dir="${ZSH}/custom/themes/powerlevel9k"
+if [[ ! -d "$powerlevel9k_dir" ]]; then
+    git clone "https://github.com/bhilburn/powerlevel9k.git" "$powerlevel9k_dir"
+fi
+
 ZSH_THEME="powerlevel9k/powerlevel9k"
 POWERLEVEL9K_PROMPT_ON_NEWLINE=true
 POWERLEVEL9K_RPROMPT_ON_NEWLINE=true
@@ -88,6 +105,7 @@ source $ZSH/oh-my-zsh.sh
 # plugins, and themes. Aliases can be placed here, though oh-my-zsh
 # users are encouraged to define aliases within the ZSH_CUSTOM folder.
 # For a full list of active aliases, run `alias`.
+[[ -e "$HOME/.aliases" ]] && source "$HOME/.aliases"
 #
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"

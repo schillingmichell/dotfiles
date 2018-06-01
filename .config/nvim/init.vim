@@ -1,6 +1,6 @@
 "{{{ includes
-source $HOME/.config/nvim/conf.d/plug.vim
-source $HOME/.config/nvim/conf.d/nerdtree.vim
+source ~/.config/nvim/conf.d/plug.vim
+"source $HOME/.config/nvim/conf.d/nerdtree.vim
 
 "}}}
 
