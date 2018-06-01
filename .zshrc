@@ -1,6 +1,6 @@
 export DISPLAY=:0.0
 
-if [[ -n $(ifconfig | egrep 'inet\ *10\.(151|212)\.') ]]; then
+if [[ -z $http_proxy && -n $(ifconfig | egrep 'inet\ *10\.(151|212)\.') ]]; then
     proxy_host="http://194.55.109.155:80"
     echo "setting proxy to '${proxy_host}'"
     export http_proxy="$proxy_host"
