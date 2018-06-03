@@ -7,8 +7,10 @@ alias l='ls -lhF'
 alias la='ls -lahF'
 alias ll='la'
 
-alias vi="nvim -p"
-alias vim="nvim -p"
+if [[ -x $(command -v nvim) ]]; then
+    alias vi="nvim -p"
+    alias vim="nvim -p"
+fi
 
 alias rm='rm -i'
 

@@ -1,12 +1,12 @@
 export DISPLAY=:0.0
 
-if [[ -z $http_proxy && -n $(ifconfig | egrep 'inet\ *10\.(151|212)\.') ]]; then
-    proxy_host="http://194.55.109.155:80"
-    echo "setting proxy to '${proxy_host}'"
-    export http_proxy="$proxy_host"
-    export https_proxy="$proxy_host"
-    export no_proxy="10.*,172.19.*,194.55.*,localhost"
-fi
+#if [[ -z $http_proxy && -n $(ifconfig | egrep 'inet\ *10\.(151|212)\.') ]]; then
+#    proxy_host="http://194.55.109.155:80"
+#    echo "setting proxy to '${proxy_host}'"
+#    export http_proxy="$proxy_host"
+#    export https_proxy="$proxy_host"
+#    export no_proxy="10.*,172.19.*,194.55.*,localhost"
+#fi
 
 export EDITOR="nvim"
 
@@ -108,7 +108,7 @@ source $ZSH/oh-my-zsh.sh
 # plugins, and themes. Aliases can be placed here, though oh-my-zsh
 # users are encouraged to define aliases within the ZSH_CUSTOM folder.
 # For a full list of active aliases, run `alias`.
-[[ -e "$HOME/.aliases" ]] && source "$HOME/.aliases"
+[[ -f "$HOME/.aliases" ]] && source "$HOME/.aliases"
 #
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
