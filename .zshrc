@@ -1,12 +1,14 @@
+export PATH=$(tr ':' '\n' <<<"$PATH" | grep -ve '^/mnt/.*' | tr '\n' ':')
+
 export DISPLAY=:0.0
 
-#if [[ -z $http_proxy && -n $(ifconfig | egrep 'inet\ *10\.(151|212)\.') ]]; then
-#    proxy_host="http://194.55.109.155:80"
-#    echo "setting proxy to '${proxy_host}'"
-#    export http_proxy="$proxy_host"
-#    export https_proxy="$proxy_host"
-#    export no_proxy="10.*,172.19.*,194.55.*,localhost"
-#fi
+if [[ -z $http_proxy && -n $(ip ad sh | egrep 'inet\ *10\.(151|212)\.') ]]; then
+    proxy_host="http://194.55.109.155:80"
+    echo "setting proxy to '${proxy_host}'"
+    export http_proxy="$proxy_host"
+    export https_proxy="$proxy_host"
+    export no_proxy="10.*,172.19.*,194.55.*,localhost"
+fi
 
 export EDITOR="nvim"
 

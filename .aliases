@@ -15,3 +15,5 @@ fi
 alias rm='rm -i'
 
 #alias ssh='ssh -c arcfour,blowfish-cbc -XC'
+
+alias se="sudoedit"
