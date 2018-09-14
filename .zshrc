@@ -18,7 +18,7 @@ if [[ ! -d "$ZSH" ]]; then
 fi
 
 ZSH_THEME="geometry/geometry"
-plugins=(virtualenv git exec_time hg)
+plugins=(virtualenv git exec_time hg zsh-syntax-highlighting)
 
 source $ZSH/oh-my-zsh.sh
 
