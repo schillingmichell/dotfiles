@@ -4,7 +4,7 @@
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
-bash_aliases="$HOME/.bash_aliases"
+bash_aliases="$HOME/.aliases"
 [[ -e $bash_aliases ]] && . $bash_aliases
 
 # normal text colors

@@ -5,6 +5,7 @@ if empty(glob("~/.local/share/nvim/site/autoload/plug.vim"))
 endif
 
 call plug#begin("~/.local/share/nvim/plugged")
+    Plug 'w0rp/ale'
     Plug 'tomasr/molokai'
     Plug 'scrooloose/nerdtree'
     Plug 'Xuyuanp/nerdtree-git-plugin'
