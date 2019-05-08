@@ -7,7 +7,7 @@ if [[ -z $http_proxy && -n $(ip ad sh | egrep 'inet\ *10\.(151|212)\.') ]]; then
     echo "setting proxy to '${proxy_host}'"
     export http_proxy="$proxy_host"
     export https_proxy="$proxy_host"
-    export no_proxy="10.*,172.19.*,194.55.*,localhost"
+    export no_proxy="10.,172.19.,194.55.,localhost,.tba.de"
 fi
 
 export EDITOR="nvim"
