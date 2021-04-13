@@ -10,6 +10,7 @@ alias ll='la'
 if [[ -x $(command -v nvim) ]]; then
     alias vi="nvim -p"
     alias vim="nvim -p"
+    alias nvim="nvim -p"
 fi
 
 alias rm='rm -i'
@@ -17,3 +18,5 @@ alias rm='rm -i'
 #alias ssh='ssh -c arcfour,blowfish-cbc -XC'
 
 alias se="sudoedit"
+
+alias code='DISPLAY=:0 code'

@@ -12,7 +12,7 @@ PATH="${HOME}/.local/bin:${PATH}"
 #PATH="/mnt/c/Program Files/Docker/Docker/resources/bin:/mnt/c/ProgramData/DockerDesktop/version-bin:${PATH}"
 export PATH
 
-source ${HOME}/bin/functions/*.inc.sh
+[[ -d ${HOME}/bin ]] && source ${HOME}/bin/functions/*.inc.sh
 
 export DISPLAY=rtg:0.0
 export DISPLAY=$(awk '/nameserver / {print $2; exit}' /etc/resolv.conf 2>/dev/null):0
