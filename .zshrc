@@ -20,7 +20,7 @@ export LIBGL_ALWAYS_INDIRECT=1
 
 if [[ -z $http_proxy && -n $(ip ad sh | egrep 'inet\ *10\.(151|212)\.') ]]; then
     proxy_host="http://194.55.109.155:80"
-    echo "setting proxy to '${proxy_host}'"
+    #echo "setting proxy to '${proxy_host}'"
     export http_proxy="$proxy_host"
     export https_proxy="$proxy_host"
     export no_proxy="10.,172.19.,194.55.,localhost,.tba.de,.travelbasys.de"

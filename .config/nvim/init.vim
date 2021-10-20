@@ -55,8 +55,9 @@ filetype plugin on
 " set colorscheme
 color molokai
 
-" show line numbers
+" hybrid line numbers > show the currents line number and others relative to it
 set number
+set relativenumber
 
 " enable vim-airline set symbols
 let g:airline_powerline_fonts = 1
