@@ -54,10 +54,16 @@ filetype plugin on
 
 " set colorscheme
 color molokai
+hi Normal guibg=NONE ctermbg=NONE
+hi LineNr guibg=NONE ctermbg=NONE
+hi SignColumn guibg=NONE ctermbg=NONE
 
 " hybrid line numbers > show the currents line number and others relative to it
 set number
 set relativenumber
+
+" always show sign column
+set signcolumn=yes
 
 " enable vim-airline set symbols
 let g:airline_powerline_fonts = 1
