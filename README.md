@@ -6,4 +6,3 @@ alias config='/usr/bin/git --git-dir=$HOME/git/github.com/michellschilling/dotfi
 config config --local status.showUntrackedFiles no
 config checkout
 ```
-```
