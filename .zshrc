@@ -8,5 +8,7 @@ source $HOME/.config/zsh/bind.zsh
 source $HOME/.config/zsh/alias.zsh
 source $HOME/.config/zsh/plugin.zsh
 
+source /usr/share/nvm/init-nvm.sh
+
 eval "$(starship init zsh)"
 eval "$(fzf --zsh)"
